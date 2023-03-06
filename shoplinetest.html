@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopline</title>
+    <style>
+        h2 {
+            font-size: 35px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        h4{
+            font-size: 25px; 
+        }
+        p {
+            font-size: 20px;
+        }
+        .header {
+            width: auto;
+            height: 800px;
+            background-color: rgb(155, 213, 218);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+        nav li {
+            list-style: none;
+            margin-top: 5px;
+        }
+        nav button {
+            width: 150px;
+            height: 60px;
+            border-radius: 10%;
+            background-color: #361ea0;
+            color: #f7f7f7;
+            font-size: 20px;
+        }
+
+        .sign {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-left: 1100px;
+        }
+
+        .headbottom {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        }
+        .headleft button {
+            margin-top: 20px;
+            width: 300px;
+            height: 50px;
+            border-radius: 10%;
+            background-color: #361ea0;
+            color: #f7f7f7;
+            font-size: 20px;
+        }
+        .headmiddle {
+            width: auto;
+            height: 150px;
+            background-color: rgb(171, 230, 235);
+        }
+        .middletop {
+            width: auto;
+            height: 220px;
+            text-align: center;
+            background-color: #ddd5d5;
+            padding-top: 1px;
+        }
+        .middlebody {
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+        }
+        .lefttop {
+            width: 600px;
+            flex-wrap: wrap;
+        }
+        .middlebody:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        .leftbottom{
+            display: flex;
+            gap: 50px;
+        }
+        .leftbottom li{
+            font-size: 20px;
+        }
+        .middlebody a{
+            text-decoration: underline;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        .middlebottom{
+            width: auto;
+            height: 800px;
+            background-color: #ddd5d5;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .item{
+            gap: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card{
+            width: calc((70% - 20px * 2) / 3);
+        }
+        .card img{
+            border-radius: 50%;
+        }
+        .bottomtop{
+            width: auto;
+            height: 500px;
+            background-color: aliceblue;
+            padding-top: 30px;
+            text-align: center;
+        }
+        .itemimg{
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            padding-top: 80px;
+        }
+        .itemp{
+            padding-top: 60px;
+            
+        } 
+        .bottombody{
+            width: auto;
+            height: 200px;
+            background-color: rgb(174, 204, 230);
+            padding-top: 30px;
+            text-align: center;
+        }
+        .bottombody button{
+            margin-top: 20px;
+            width: 200px;
+            height: 50px;
+            border-radius: 10%;
+            background-color: #361ea0;
+            color: #f7f7f7;
+            font-size: 20px;
+        }
+        .bottomend{
+            width: auto;
+            height: 800px;
+            background-color: #150b3d;
+        }
+        .bottomendtop{
+            width: auto;
+            height: 100px;
+        }
+        .bottomendtop nav{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-right: 650px;
+            padding-top: 30px;
+        }
+        .bottomendtop a{
+            color: #fff;
+            margin: auto;
+        }
+        .bottomendbody{
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .item1,.item2,.item3,.item4,.item5,.item6{
+            border-top: 1px solid rgb(194, 199, 194);
+            
+        }
+        .bottomendbody a{
+            color: #b4abab;
+        }
+        .bottomendbody li{
+            list-style:none;
+        }
+        .end{
+            width: auto;
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+        }
+        .endbm{
+            width: 850px;
+            border-bottom: 1px solid rgb(194, 199, 194);
+            display: flex;
+            
+            justify-content: flex-end;
+            margin-top: 50px;
+        }
+        .endbm button{
+            margin-bottom: 15px;
+            color: #150b3d;
+            background-color: rgb(224, 226, 76);
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="sign"><a href="#">登入</a><a href="#">台灣</div>
+        <nav>
+            <ul>
+                <li>
+                    <img src="https://picsum.photos/150/50/?random=10">
+                </li>
+                <li>
+                    <a href="#">新手上路</a>
+                </li>
+                <li>
+                    <a href="#">開店服務</a>
+                </li>
+                <li>
+                    <a href="#">行銷推廣</a>
+                </li>
+                <li>
+                    <a href="#">營運管理</a>
+                </li>
+                <li>
+                    <a href="#">方案費用</a>
+                </li>
+                <li>
+                    <a href="#">更多資源</a>
+                </li>
+                <li>
+                    <a href="#">開店說明會</a>
+                </li>
+                <li>
+                    <button>免費試用</button>
+                </li>
+            </ul>
+        </nav>
+        <div class="headbottom">
+            <div class="headleft">
+                <h2>想在哪開店創業？</h2>
+                <h2>不管是</h2>
+                <h2>網路開店社群購物零售 POS</h2>
+                <h2>SHOPLINE 一站輕鬆開賣</h2>
+                <p> 從個人賣家到國際品牌，都能以 SHOPLINE 實現全通路零售，</p>
+                <p>快速拓展市場到世界各地，輕鬆開始你的『 店 』商生意！</p>
+                <button>免費試用 14 天</button>
+            </div>
+            <div class="headright">
+                <img src="https://picsum.photos/500/500/?random=10">
+            </div>
+        </div>
+        <div class="headmiddle"></div>
+    </div>
+    <div class="middle">
+        <div class="middletop">
+            <h2>單一平台就能助你</h2>
+            <h2>在全通路輕鬆開店創業</h2>
+            <p>從網路商店架站到實體門市管理，只需要一個平台，就能輕鬆實現開店創業，並能同步管理所有銷售管道，SHOPLINE 助你賣得更多、賣得更好！</p>
+        </div>
+        <div class="middlebody">
+            <div class="bodyleft">
+                <div class="lefttop">
+                    <h3>免寫程式、多款版型</h3>
+                    <h3>輕鬆打造全能電商網站</h3>
+                    <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。</p>
+                </div>
+                <div class="leftbottom">
+                    <div class="leftbottomlli">
+                        <ul>
+                        <li>豐富版型主題與字型搭配</li>
+                        <li>SEO 搜尋引擎優化</li>
+                        <li>RWD 響應式網頁設計</li>
+                    </ul>
+                    </div>
+                    <div class="leftbottomrli">
+                        <ul>
+                            <li>一頁商店</li>
+                            <li>獨有網址 ＆ SSL 安全憑證</li>
+                            <li>開放 HTML／CSS 編輯</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#">看看開店祕技→</a>
+            </div>
+            <div class="bodyright"><img src="https://picsum.photos/400/450/?random=10"></div>
+        </div>
+        <div class="middlebody">
+            <div class="bodyleft">
+                <div class="lefttop">
+                    <h3>支持海內外電商</h3>
+                    <h3>金流、物流一次搞定</h3>
+                    <p>支持在地及國際金流、物流串接服務，提供海內外顧客最便利的付款及送貨服務，加速消費者完成下單交易，大幅降低購物車放棄率！</p>
+                </div>
+                <div class="leftbottom">
+                    <div class="leftbottomlli">
+                        <ul>
+                        <li>線上／線下信用卡刷卡</li>
+                        <li>第三方金流／行動支付整合</li>
+                        <li>超商代碼／條碼繳費</li>
+                        </ul>
+                    </div>
+                    <div class="leftbottomrli">
+                        <ul>
+                            <li>多溫層宅配並指定運費</li>
+                            <li>超商／宅配貨到付款</li>
+                            <li>發票開立與串接</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#">了解更多金物流→</a>
+            </div>
+            <div class="bodyright"><img src="https://picsum.photos/400/450/?random=10"></div>
+        </div>
+        <div class="middlebody">
+            <div class="bodyleft">
+                <div class="lefttop">
+                    <h3>刺激下單，創造回購</h3>
+                    <h3>行銷導流、促購模組任你玩</h3>
+                    <p>多元優惠活動、會員集客機制、網紅分潤等多種優惠促銷，將電商行銷玩法一網打盡；加上廣告追蹤助你有效優化行銷活動，刺激顧客下單、吸引鐵粉回購！</p>
+                </div>
+                <div class="leftbottom">
+                    <div class="leftbottomlli">
+                        <ul>
+                        <li>推薦活動與分潤</li>
+                        <li>A+B 優惠活動</li>
+                        <li>A+B 優惠活動</li>
+                        </ul>
+                    </div>
+                    <div class="leftbottomrli">
+                        <ul>
+                            <li>買Ｘ享Ｙ優惠</li>
+                            <li>會員推薦獎賞</li>
+                            <li>FB／Google／LINE 廣告追蹤</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#">看更多優惠模組→</a>
+            </div>
+            <div class="bodyright"><img src="https://picsum.photos/400/450/?random=10"></div>
+        </div>
+        <div class="middlebody">
+            <div class="bodyleft">
+                <div class="lefttop">
+                    <h3>「社群+電商」輕鬆開賣</h3>
+                    <h3>打造一致的社群購物體驗</h3>
+                    <p>善用社群與顧客頻繁互動，讓你透過社群也能輕鬆開賣！從直播 +1 接單、聊天機器人到各管道的訊息整合，我們都為你準備好了，不放過每個銷售環節，打造全方位的社群購物體驗！</p>
+                </div>
+                <div class="leftbottom">
+                    <div class="leftbottomlli">
+                        <ul>
+                        <li>社群直播購物系統</li>
+                        <li>FB & IG 貼文 +1</li>
+                        <li>自訂聊天機器人腳本</li>
+                        </ul>
+                    </div>
+                    <div class="leftbottomrli">
+                        <ul>
+                            <li>FB／IG／LINE 直播 +1</li>
+                            <li>FB／IG／LINE 對話式購物</li>
+                            <li>訊息整合中心</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#">看更多社群購物功能→</a>
+            </div>
+            <div class="bodyright"><img src="https://picsum.photos/400/450/?random=10"></div>
+        </div>
+        <div class="middlebody">
+            <div class="bodyleft">
+                <div class="lefttop">
+                    <h3>OMO 全通路無縫整併</h3>
+                    <h3>輕鬆管理網店、門市以及其他通路</h3>
+                    <p>不論是網店拓展門市，還是門市想發展網路生意，從商品、庫存、訂單到會員等各項虛實店舖的資料都能完善整併，輕鬆實現全通路會員經營到多店營運。</p>
+                </div>
+                <div class="leftbottom">
+                    <div class="leftbottomlli">
+                        <ul>
+                        <li>線上／線下信用卡刷卡</li>
+                        <li>線上／線下信用卡刷卡</li>
+                        <li>門市快速集客工具</li>
+                        </ul>
+                    </div>
+                    <div class="leftbottomrli">
+                        <ul>
+                            <li>門市快速集客工具</li>
+                            <li>進銷庫存／調撥／多店管理</li>
+                            <li>進銷庫存／調撥／多店管理</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#">了解更多全通路整合→</a>
+            </div>
+            <div class="bodyright"><img src="https://picsum.photos/400/450/?random=10"></div>
+        </div>
+        <div class="middlebottom">
+            <h2>更多功能與服務</h2>
+            <div class="item">
+                <div class="card">
+                    <img src="https://picsum.photos/100/100/?random=10">
+                    <h4>強大庫存與訂單系統</h4>
+                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/100/100/?random=10">
+                    <h4>即時化商店業績分析</h4>
+                    <p>圖表化報表助你一手掌握商店概況，讓數據助攻企業成長，營運策略更有方向。</p>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/100/100/?random=10">
+                    <h4>多國語系、幣值切換</h4>
+                    <p>想做跨境電商也ＯＫ！提供語言、幣別、稅金等進階功能，友善應對海外消費需求。</p>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/100/100/?random=10">
+                    <h4>專業顧問線上支援</h4>
+                    <p>迅速、透明的溝通管道，協助你快速解決從線上到線下、從在地到海外的網店疑難。</p>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/100/100/?random=10">
+                    <h4>廣告行銷加值服務</h4>
+                    <p>由官方認證的專業投手團隊，協助品牌投遞 Facebook、Google、LINE 等廣告。</p>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/100/100/?random=10">
+                    <h4>品牌專屬成長社群</h4>
+                    <p>致力為品牌店家打造能深度交流且互助的生態體系，是拓展人脈、商機的絕佳場域。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottomtop">
+            <h2>人氣品牌一致推薦使用</h2>
+                <div class="itemimg">
+                    <a href="#"><img src="https://picsum.photos/150/80/?random=10"></a>
+                    <a href="#"><img src="https://picsum.photos/150/80/?random=10"></a>
+                    <a href="#"><img src="https://picsum.photos/150/80/?random=10"></a>
+                    <a href="#"><img src="https://picsum.photos/150/80/?random=10"></a>
+                    <a href="#"><img src="https://picsum.photos/150/80/?random=10"></a>
+                </div>
+                <div class="itemp">
+                    <p>“ SHOPLINE 在行動裝置上操作的順暢度很高；使用者給的建議與意見會採納，處理的速度也不錯；</p>
+                    <p>還一直有新功能推出，不斷成長。 ”</p>
+                </div>
+            </div>
+        <div class="bottombody">
+                <h2>全亞洲超過 500,000 個品牌都在使用 SHOPLINE</h2>
+                <button>免費試用 14 天</button>
+        </div>
+        <div class="bottomend">
+            <div class="bottomendtop">
+                <nav>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">人才招募</a></li>
+                    <li><a href="#">媒體專區</a></li>
+                </nav>
+            </div>
+            <div class="bottomendbody">
+                <div class="item1">
+                    <ul>
+                        <p>網路開店</p>
+                        <li><a href="#">特色總覽</a></li>
+                        <li><a href="#">功能介紹</a></li>
+                        <li><a href="#">版型主題</a></li>
+                        <li><a href="#">客戶案例</a></li>
+                    </ul>
+                </div>
+                <div class="item2">
+                    <ul>
+                        <p>社群購物</p>
+                        <li><a href="#">特色總覽</a></li>
+                        <li><a href="#">功能介紹</a></li>
+                        <li><a href="#">IG 直播 +1</a></li>
+                    </ul>
+                </div>
+                <div class="item3">
+                    <ul>
+                        <p>零售 POS</p>
+                        <li><a href="#">特色總覽</a></li>
+                        <li><a href="#">功能介紹</a></li>
+                        <li><a href="#">週邊硬體</a></li>
+                    </ul>
+                </div>
+                <div class="item4">
+                    <ul>
+                        <p>我要開店</p>
+                        <li><a href="#">開店方案</a></li>
+                        <li><a href="#">開店說明會</a></li>
+                        <li><a href="#">開店諮詢</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="item5">
+                    <ul>
+                        <p>更多資源</p>
+                        <li><a href="#">新手問答</a></li>
+                        <li><a href="#">電商教室</a></li>
+                        <li><a href="#">電商成長學苑</a></li>
+                        <li><a href="#">DreamBig 創品牌</a></li>
+                        <li><a href="#">SHOPLINE TRENDS 電商數據庫</a></li>
+                        <li><a href="#">顧問陪跑計劃</a></li>
+                        <li><a href="#">LINE 官方帳號</a></li>
+                    </ul>
+                </div>
+                <div class="item6">
+                    <ul>
+                        <p>SHOPLINE</p>
+                        <li><a href="#">認識團隊</a></li>
+                        <li><a href="#">合作機會</a></li>
+                        <li><a href="#">精選夥伴</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="end">
+                <div class="endbm">
+                    <button>資訊安全保護專區</button>
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
